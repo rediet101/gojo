@@ -15,35 +15,35 @@ const SearchForm = () => {
   return (
     <div className="grid w-full items-end gap-4 rounded-lg bg-black sm:grid-cols-2 lg:grid-cols-4 p-6">
        <Form {...form}>
-        <FormField control={form.control} name="Adress" render={({field})=>{
-            return(
-                <FormItem>
-                    <FormLabel className="text-white">Property</FormLabel>
-                    <Select>
-                        <SelectTrigger className="w-full bg-white">
-                            <SelectValue placeholder="Type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="buy">Buy</SelectItem>
-                            <SelectItem value="sell">Sell</SelectItem>
-                            <SelectItem value="rent">Rent</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </FormItem>
+     <FormField control={form.control} name="Adress" render={() => {
+  return (
+    <FormItem>
+        <FormLabel className="text-white">Property</FormLabel>
+        <Select>
+            <SelectTrigger className="w-full bg-white">
+                <SelectValue placeholder="Type" />
+            </SelectTrigger>
+            <SelectContent>
+                <SelectItem value="buy">Buy</SelectItem>
+                <SelectItem value="sell">Sell</SelectItem>
+                <SelectItem value="rent">Rent</SelectItem>
+            </SelectContent>
+        </Select>
+    </FormItem>
+  );
+}}></FormField>
 
-            )
-        }}></FormField>
-        <FormField control={form.control} name="Address" render={({field})=>{
-            return(
-                <FormItem>
-                  <FormLabel className="text-white">Address</FormLabel>
-                  <FormControl className="bg-white">
-                    <Input placeholder="Search by Address"></Input>
-                    </FormControl>  
-                </FormItem>
-            )
-        }
-    }></FormField>
+<FormField control={form.control} name="Address" render={() => {
+  return (
+    <FormItem>
+        <FormLabel className="text-white">Address</FormLabel>
+        <FormControl className="bg-white">
+            <Input placeholder="Search by Address" />
+        </FormControl>
+    </FormItem>
+  );
+}}></FormField>
+
      <FormField
           control={form.control}
           name="dob"
